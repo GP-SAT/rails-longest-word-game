@@ -9,7 +9,7 @@ class GamesController < ApplicationController
   end
  
   def score
-    @letters = params[:letters].split(" ")
+    @letters = params[:letters].split("")
     @word = params[:word].split("")
     counter = 0
     @word.each do |letter|
