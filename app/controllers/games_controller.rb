@@ -19,12 +19,12 @@ class GamesController < ApplicationController
     end
     if @word.length == counter
       if english_word?(params[:word])
-        @result = "Congratulations! #{@word} is a valid English word!"
+        @result = "Congratulations! #{@word.join('')} is a valid English word!"
       else
-        @result = "Sorry but #{@word} does not seem to be a valid English word..."
+        @result = "Sorry but #{@word.join('')} does not seem to be a valid English word..."
       end
     else
-      @result = "Sorry but #{@word} can't be built out of #{@letters}"
+      @result = "Sorry but #{@word.join('')} can't be built out of #{@letters.join('')}"
     end
   end
 
